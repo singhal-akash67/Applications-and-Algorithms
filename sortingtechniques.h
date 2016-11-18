@@ -131,4 +131,43 @@ void mergesort(int *array,int end,int start=0)
     mergesort(array,end,mid+1);
     merge(array,start,mid,end-1);
 }
+void maxheapify(int *array,int index,int n)
+{
+    int left=index*2+1;
+    int right=index*2+2;
+    int greater=index;
+    if(left<=n&&array[left]>array[greater])
+        greater=left;
+    if(right<=n&&array[right]>array[greater])
+        greater=right;
+    if(index!=greater)
+    {
+        swap(array[index],array[greater]);
+        maxheapify(array,greater,n);
+    }
+    else
+        return;
+}
+void buildheap(int *array,int n)
+{
+    for(int i=n/2;i>=0;i--)
+    {
+        maxheapify(array,i,n);
+    }
+}
+void helperfunctionforheapsort(int *array,int n)
+{
+    for(int temp=n;temp>0;)
+    {
+        swap(array[0],array[temp]);
+        temp--;
+        maxheapify(array,0,temp);
+    }
+}
+void heapsort(int *array,int n)
+{
+    buildheap(array,n-1);
+    helperfunctionforheapsort(array,n-1);
+
+}
 #endif // sorting_h
