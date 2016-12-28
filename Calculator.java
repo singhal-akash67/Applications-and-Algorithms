@@ -4,10 +4,9 @@ import java.awt.BorderLayout;
 import java.awt.*;
 import java.awt.event.*;
 
-/**
- *
- * @author AKASH SINGHAL
- */
+
+  @author AKASH SINGHAL
+
 public class Calculator {
      JFrame frame;
     JButton reset,backspace,one,second,third,fourth,five,six,seven,eight,nine,zero,plus,minus,divide,multiply,equalto;
@@ -34,13 +33,13 @@ public class Calculator {
     divideoperator o;
     backspace p;
     reset q;
-    
-    
- 
-    
+
+
+
+
     public static void main(String[] args) {
         Calculator xyz=new Calculator();
-        xyz.go();    
+        xyz.go();
     }
     public void go(){
         frame=new JFrame();
@@ -80,7 +79,7 @@ public class Calculator {
         five=new JButton("5");
         six=new JButton("6");
         seven=new JButton("7");
-        eight=new JButton("8");  
+        eight=new JButton("8");
          e=new fiveclass();
         f=new sixclass();
         g=new sevenclass();
@@ -105,7 +104,7 @@ public class Calculator {
                 m=new minusoperator();
                 n=new multiplyoperator();
                 o=new divideoperator();
-                
+
         nine.addActionListener(i);
         zero.addActionListener(j);
         panelrightmost.add(nine);
@@ -114,7 +113,7 @@ public class Calculator {
         paneloperators=new JPanel();
         paneloperators.setLayout(new BoxLayout(paneloperators,BoxLayout.Y_AXIS));
         minus=new JButton("-");
-        plus=new JButton("+"); 
+        plus=new JButton("+");
         divide=new JButton("/");
         multiply=new JButton("*");
         equalto=new JButton("=");
@@ -132,7 +131,7 @@ public class Calculator {
         topmost.add(panelcentermost);
         topmost.add(panelrightmost);
         topmost.add(paneloperators);
-        
+
         frame.getContentPane().add(BorderLayout.NORTH,panel);
         frame.getContentPane().add(BorderLayout.CENTER,topmost);
         frame.setSize(300,300);
@@ -146,8 +145,8 @@ public class Calculator {
                 firstnumberformation(1);
             else
                 secondnumberformation(1);
-            
-           
+
+
         }
     }
     class twoclass implements ActionListener
@@ -158,7 +157,7 @@ public class Calculator {
                 firstnumberformation(2);
             else
                 secondnumberformation(2);
-            
+
         }
     }
     class threeclass implements ActionListener
@@ -169,7 +168,7 @@ public class Calculator {
                 firstnumberformation(3);
             else
                 secondnumberformation(3);
-            
+
         }
     }
     class fourclass implements ActionListener
@@ -180,7 +179,7 @@ public class Calculator {
                 firstnumberformation(4);
             else
                 secondnumberformation(4);
-            
+
         }
     }
     class fiveclass implements ActionListener
@@ -191,7 +190,7 @@ public class Calculator {
                 firstnumberformation(5);
             else
                 secondnumberformation(5);
-            
+
         }
     }
     class sixclass implements ActionListener
@@ -202,7 +201,7 @@ public class Calculator {
                 firstnumberformation(6);
             else
                 secondnumberformation(6);
-            
+
         }
     }
     class sevenclass implements ActionListener
@@ -213,7 +212,7 @@ public class Calculator {
                 firstnumberformation(7);
             else
                 secondnumberformation(7);
-            
+
         }
     }
     class eightclass implements ActionListener
@@ -224,7 +223,7 @@ public class Calculator {
                 firstnumberformation(8);
             else
                 secondnumberformation(8);
-            
+
         }
     }
     class nineclass implements ActionListener
@@ -235,7 +234,7 @@ public class Calculator {
                 firstnumberformation(9);
             else
                 secondnumberformation(9);
-            
+
         }
     }
     class zeroclass implements ActionListener
@@ -246,7 +245,7 @@ public class Calculator {
                 firstnumberformation(0);
             else
                 secondnumberformation(0);
-            
+
         }
     }
     class backspace implements ActionListener
@@ -306,8 +305,8 @@ public class Calculator {
             secondnumber=0;
             textfield.setText(Float.toString(firstnumber));
             operator=false;
-                
-          
+
+
         }
     }
      class plusoperator implements ActionListener
@@ -337,14 +336,14 @@ public class Calculator {
                  secondnumber=0;
                  operator=false;
              }
-         
-             
-             
+
+
+
              operator=true;
              operatorsign=("+");
-             
+
          }
-         
+
      }
      class multiplyoperator implements ActionListener
      {
@@ -373,14 +372,14 @@ public class Calculator {
                  secondnumber=0;
                  operator=false;
              }
-       
-             
-             
+
+
+
              operator=true;
              operatorsign=("*");
-             
+
          }
-         
+
      }
      class minusoperator implements ActionListener
      {
@@ -409,14 +408,14 @@ public class Calculator {
                  secondnumber=0;
                  operator=false;
              }
-            
-             
-             
+
+
+
              operator=true;
              operatorsign=("-");
-             
+
          }
-         
+
      }
      class divideoperator implements ActionListener
      {
@@ -445,13 +444,13 @@ public class Calculator {
                  secondnumber=0;
                  operator=false;
              }
-        
-             
-             
+
+
+
              operator=true;
              operatorsign=("/");
-             
+
          }
-         
+
      }
  }
