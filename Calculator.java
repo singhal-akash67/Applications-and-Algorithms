@@ -13,8 +13,8 @@ public class Calculator {
     JButton reset,backspace,one,second,third,fourth,five,six,seven,eight,nine,zero,plus,minus,divide,multiply,equalto;
     JPanel panel,panelleftmost,panelcentermost,panelrightmost,topmost,paneloperators;
     JTextField textfield;
-    int firstnumber=0;
-    int secondnumber=0;
+    float firstnumber=0;
+    float secondnumber=0;
     boolean operator=false;
     String operatorsign;
     oneclass a;
@@ -274,12 +274,12 @@ public class Calculator {
     void firstnumberformation(int a)
     {
         firstnumber=firstnumber*10+a;
-        textfield.setText(Integer.toString(firstnumber));
+        textfield.setText(Float.toString(firstnumber));
     }
     void secondnumberformation(int b)
     {
         secondnumber=secondnumber*10+b;
-        textfield.setText(Integer.toString(secondnumber));
+        textfield.setText(Float.toString(secondnumber));
     }
      class equaltooperator implements ActionListener
     {
@@ -304,7 +304,7 @@ public class Calculator {
                 firstnumber=firstnumber/secondnumber;
             }
             secondnumber=0;
-            textfield.setText(Integer.toString(firstnumber));
+            textfield.setText(Float.toString(firstnumber));
             operator=false;
                 
           
